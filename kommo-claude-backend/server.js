@@ -176,7 +176,7 @@ ${etapas.map((e, i) => `Etapa ${i + 1} - ${e.nome}: ${e.quantidade} leads | R$ $
 // Inicia o servidor
 // ─────────────────────────────────────────────
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
   console.log(`📋 Rotas disponíveis:
   GET  /oauth/callback      → Callback OAuth do Kommo
