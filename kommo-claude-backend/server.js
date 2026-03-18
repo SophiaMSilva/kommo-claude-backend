@@ -9,6 +9,12 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const KOMMO_CLIENT_ID = process.env.KOMMO_CLIENT_ID;
 const KOMMO_CLIENT_SECRET = process.env.KOMMO_CLIENT_SECRET;
 const KOMMO_REDIRECT_URI = process.env.KOMMO_REDIRECT_URI;
+// ─────────────────────────────────────────────
+// Adicionado 18/03, antes das outras rotas
+// ─────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'Servidor rodando!' });
+});
 
 // ─────────────────────────────────────────────
 // Função central: chama a API do Claude
